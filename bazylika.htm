@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Bazylika Św. Piotra</title>
+
+     <meta name="description" content="Strona o miejscach, które chciałabym zwiedzić">
+     <meta name="keywords" content="rzym,koloseum,panteon,watykan,bazylika,zwiedzanie,podróżowanie">
+     <meta name="author" content="Kasia Nadera">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+	 </script>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	 <script src="jquery.scrollTo.min.js"></script>
+	
+	 <script>
+		
+		 jQuery(function($)
+		 {
+			//zresetuj scrolla
+		 	$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#Bazylika'), 1000); });
+			$('#link2').click(function() { $.scrollTo($('#Historia'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('#Galeria'), 1000); });
+
+			$('.scrollup').click(function() { $.scrollTo($('body'), 700); });
+		 }
+		 );
+		
+		 //pokaż podczas przewijania
+		 $(window).scroll(function()
+		 {
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		 }
+		 );
+	
+	
+	 </script>
+	 
+	 <script type="text/javascript">
+ 
+    //utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+    </script>
+
+  </head>
+  <body>
+	<div id="container">
+	
+		<a href="#" class="scrollup"></a>
+		
+			<div id="menu">
+				<ul>
+					<li><a href="index.htm">Rzym</a></li>
+					<li><a href="koloseum.htm">Koloseum</a></li>
+					<li><a href="panteon.htm">Panteon</a></li>
+					<li><a href="bazylika.htm">Bazylika Św. Piotra</a></li>
+					<li><a href="muzeum.htm">Muzea Watykańskie</a></li>
+				</ul>
+				<div id="zegar">
+				</div>
+			</div>
+			<div id="content">
+			
+			<!--Spis treści-->
+			
+			<div class="slajd">
+				<h1> Spis treści. </h1>
+				<ol>
+					<li><a id="link1" href="#">Trochę o bazylice</a></li>
+					<li><a id="link2" href="#">Historia bazyliki</a></li>
+					<li><a id="link3" href="#">Galeria</a></li>
+				<ol>
+			</div>
+			
+			<!--Pierwszy slajd-->
+			
+			<div class="slajd">
+				<h1 id="Bazylika"> Trochę o bazylice </h1>
+				
+				Bazylika Świętego Piotra na Watykanie (wł. Basilica Papale di San Pietro in Vaticano, łac. Basilica Sancti Petri) – rzymskokatolicka bazylika na Wzgórzu Watykańskim, zbudowana w latach 1506–1626, na miejscu starszej bazyliki wczesnochrześcijańskiej, fundacji cesarza Konstantyna Wielkiego, jedna z czterech bazylik większych Rzymu oraz jedna z wielu bazylik papieskich (dawniej patriarchalnych), sanktuarium, jeden z najważniejszych ośrodków pielgrzymkowych.
+				
+				<p>Wedle tradycji bazylika stoi na miejscu pochówku św. Piotra, uznawanego przez katolików za pierwszego papieża – jego grób leży pod głównym ołtarzem. Świątynia jest nekropolią papieży, w tym świętych m.in. Leon Wielki, Leona III, Grzegorza Wielkiego, Piusa X, Jana XXIII i Jana Pawła II. Miejsce obrad dwóch ostatnich soborów Kościoła katolickiego – Watykańskiego I i Watykańskiego II.</p>
+
+				<p>Czołowe dzieło architektury renesansu i baroku, z bardzo bogatym wystrojem wnętrza, gdzie znalazły się również zabytki pochodzące z dawnej konstantyńskiej bazyliki zbudowanej w tym miejscu (m.in. brązowa figura św. Piotra Arnolfa di Cambio). W okresie nowożytnym swoje dzieła sztuki wykonali tu Michał Anioł (Pieta Watykańska), Gianlorenzo Bernini (m.in. ołtarz Świętego Piotra z baldachimem, Cathedra Petri, nagrobki papieży Aleksandra VII i Urbana VIII, figura św. Longinusa), Alessandro Algardi, Antonio Canova, Bertel Thorvaldsen.</p>
+
+				Bazylika watykańska jest drugim co do wielkości kościołem na świecie (powierzchnia 23 000 m²; większą świątynią jest tylko bazylika Matki Bożej Królowej Pokoju w Jamusukro o powierzchni 30 000 m²) i jedno z najważniejszych świętych miejsc katolicyzmu. Usytuowana jest przy placu Świętego Piotra, do którego prowadzi z centrum Rzymu Via della Conciliazione.
+			</div>
+			
+			<!--Drugi slajd-->
+			
+			<div class="slajd">
+				<h1 id="Historia"> Historia bazyliki </h1>
+				
+				Pierwotna bazylika została zbudowana przez Konstantyna Wielkiego około 324 roku jako świątynia memorialna nad grobem Świętego Piotra. Była to duża (122,0 × 64,0 m), pięcionawowa bazylika zakończona poprzeczną nawą – transeptem z przylegającą do niej absydą w osi nawy głównej. Od wschodu poprzedzało ją duże atrium z fontanną umieszczoną w jego części centralnej (z fontanny zachowała się rzeźba szyszki pinii umieszczona w niszy na dziedzińcu Szyszki).
+				<br><br>
+				Bazylika, położona poza murami Rzymu, stała się miejscem pielgrzymek dla wyznawców chrześcijaństwa. Po jej ograbieniu przez arabskich piratów (w 846) papież Leon IV podjął decyzję o otoczeniu bazyliki i przylegających do niej budynków murem obronnym. W ten sposób powstało tak zwane miasto leonowe.
+
+			</div>
+			
+			<!--Trzeci slajd-->
+			
+			<div class="slajd">
+				<h1 id="Galeria">Galeria</h1>
+								
+					<div class="slideshow-container">
+					  
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 6</div>
+							<img src="img/bazylika1.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 6</div>
+							<img src="img/bazylika2.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 6</div>
+							<img src="img/bazylika3.png" style="width:100%">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 6</div>
+							<img src="img/bazylika4.png" style="width:100%">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 6</div>
+							<img src="img/bazylika5.png" style="width:100%">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">6 / 6</div>
+							<img src="img/bazylika6.png" style="width:100%">
+						</div>
+						
+						<script>
+						var slideIndex = 0;
+						showSlides();
+
+						function showSlides() {
+						  var i;
+						  var slides = document.getElementsByClassName("mySlides");
+						  var dots = document.getElementsByClassName("dot");
+						  for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";  
+						  }
+						  slideIndex++;
+						  if (slideIndex > slides.length) {slideIndex = 1}
+						  slides[slideIndex-1].style.display = "block";
+						  setTimeout(showSlides, 3000); // Change image every 2 seconds
+						}
+						</script>
+					</div>
+			</div>
+			<div class="slajd">
+				<h4> Więcej informacji na temat bazyliki:<a target="blank" href="https://pl.wikipedia.org/wiki/Bazylika_św._Piotra_na_Watykanie"> https://pl.wikipedia.org/wiki/Bazylika_św._Piotra_na_Watykanie <a> </h3>
+			</div>
+		</div>
+		<div id="footer">
+			<a href="mailto:baku.96@wp.pl"> Kasia Nadera 2020 Kliknij tutaj aby wysłać maila! </a>
+		</div>
+	</div>
+  </body>
+
+</html>

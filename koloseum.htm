@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Koloseum</title>
+
+     <meta name="description" content="Strona o miejscach, które chciałabym zwiedzić">
+     <meta name="keywords" content="rzym,koloseum,panteon,watykan,bazylika,zwiedzanie,podróżowanie">
+     <meta name="author" content="Kasia Nadera">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+	 </script>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	 <script src="jquery.scrollTo.min.js"></script>
+	
+	 <script>
+		
+		 jQuery(function($)
+		 {
+			//zresetuj scrolla
+		 	$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#Koloseum'), 1000); });
+			$('#link2').click(function() { $.scrollTo($('#Daty'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('#Kontrowersje'), 1000); });
+			$('#link4').click(function() { $.scrollTo($('#Galeria'), 1000); });
+
+			$('.scrollup').click(function() { $.scrollTo($('body'), 700); });
+		 }
+		 );
+		
+		 //pokaż podczas przewijania
+		 $(window).scroll(function()
+		 {
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		 }
+		 );
+	
+	
+	 </script>
+	 
+	 <script type="text/javascript">
+ 
+    //utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+    </script>
+	
+  </head>
+  <body background="img/tlo.png">
+	<div id="container">
+	
+		<a href="#" class="scrollup"></a>
+		
+			<div id="menu">
+				<ul>
+					<li><a href="index.htm">Rzym</a></li>
+					<li><a href="koloseum.htm">Koloseum</a></li>
+					<li><a href="panteon.htm">Panteon</a></li>
+					<li><a href="bazylika.htm">Bazylika Św. Piotra</a></li>
+					<li><a href="muzeum.htm">Muzea Watykańskie</a></li>
+				</ul>
+				<div id="zegar">
+				</div>
+			</div>
+			<div id="content">
+			
+			<!--Spis treści-->
+			
+			<div class="slajd">
+				<h1> Spis treści. </h1>
+				<ol>
+					<li><a id="link1" href="#">Trochę o Koloseum</a></li>
+					<li><a id="link2" href="#">Daty związane z Koloseum</a></li>
+					<li><a id="link3" href="#">Kontrowersje</a></li>
+					<li><a id="link4" href="#">Galeria</a></li>
+				<ol>
+			</div>
+			
+			<!--Pierwszy slajd-->
+			
+			<div class="slajd">
+				<h1 id="Koloseum"> Trochę o Koloseum </h1>
+				Koloseum, właściwie amfiteatr Flawiuszów – amfiteatr w Rzymie, wzniesiony w latach 70-72 do 80 n.e. przez Wespazjana i Tytusa – cesarzy z dynastii Flawiuszów.
+				<p>Odbywały się w nim m.in. walki gladiatorów, naumachie, polowania na dzikie zwierzęta. Tradycja mówi, iż w Koloseum mordowano chrześcijan, co upamiętniono krzyżem wewnątrz budowli. Od połowy XVIII wieku Koloseum jest otoczone opieką jako miejsce męczeństwa pierwszych chrześcijan, wcześniej pozyskiwano z niego bloki kamienne jako materiał budowlany. Nazwa Koloseum została nadana we wczesnym średniowieczu od znajdującego się w pobliżu budowli ogromnego (gr. „kolossos”) posągu Nerona przedstawionego jako Helios.</p>
+				<img width="700px" src="img/koloseum1.jpg">
+			</div>
+			<!--Drugi slajd-->
+			
+			<div class="slajd">
+				<h1 id="Daty"> Daty związane z Koloseum </h1>
+				W 445 zostało poważnie uszkodzone przez trzęsienie ziemi.<br>
+				
+				W 528 odbyły się tu ostatnie igrzyska.<br>
+
+				Pod koniec VI wieku wewnątrz amfiteatru wybudowano mały kościół, arenę przekształcono w cmentarz.<br>
+
+				Około 1200 rodzina Frangipani przejęła Koloseum i ufortyfikowała je, używając jako zamku.<br>
+
+				W 1349 w wyniku trzęsienia ziemi zawaliła się zewnętrzna część południowej ściany.<br>
+
+				W 1744 zostało ogłoszone miejscem męczeństwa chrześcijan. Zaprzestano eksploatować go w roli kamieniołomu.<br>
+
+				Od II poł. XVIII wieku w Wielki Piątek odbywa się tutaj droga krzyżowa pod przewodnictwem papieża.<br>
+
+				7 lipca 2007 obiekt został ogłoszony jednym z siedmiu nowych cudów świata.
+			</div>
+			
+			<!--Trzeci slajd-->
+			
+			<div class="slajd">
+				<h1 id="Kontrowersje">Kontrowersje</h1>
+				<p>Naumachie mogły odbywać się w pierwszym okresie po wybudowaniu Koloseum. Uniemożliwiło je zabudowanie areny dwukondygnacyjnymi piwnicami za czasów Domicjana.</p>
+				<p>Nie ma żadnych dowodów na to, jakoby w Koloseum miały odbywać się masowe mordy na chrześcijanach, gdyż informacje o tym pojawiają się dopiero od XVII wieku. Bezsprzecznym natomiast jest fakt, iż w czasie przerw pomiędzy walkami gladiatorów dokonywano egzekucji skazańców, nieraz w wymyślny i krwawy sposób. Natomiast jako miejsce egzekucji chrześcijan podaje się Cyrk Nerona, który położony był na Wzgórzu Watykańskim.</p>
+				<p>W wielu publikacjach mówi się jakoby widzowie Koloseum mogli je opuścić w ciągu 5-6 minut. Nie jest to do końca zgodne z prawdą. Taką możliwość mieli widzowie zajmujący dolne i środkowe rzędy. Widzowie z górnych rzędów musieli przejść korytarzem o ukośnym stropie, który ma w najwyższym miejscu około 2,2 metra, co spowalniało ich wychodzenie. Prawdopodobnie takie rozwiązanie miało na celu umożliwienie patrycjuszom opuszczenie obiektu bez konieczności mieszania się z plebsem. Nie zmienia to jednak w niczym faktu, że system rozprowadzania widzów był przemyślany, a budowane współcześnie w USA stadiony nadal na nim się wzorują.</p>
+				<p>Wbrew obiegowym opiniom, Sienkiewicz nie umiejscawia ani jednego epizodu Quo vadis w Koloseum. Jedynie dwukrotnie wspomina w swej powieści o tym zabytku, odnosząc się do wydarzeń przyszłych. Całe nieporozumienie wynikało z nieuważnego czytania książki i wytykania tego „potknięcia” Sienkiewicza na zasadzie ciekawostki</p>
+			</div>
+			
+			<!--Czwarty slajd-->
+			
+			<div class="slajd">
+				<h1 id="Galeria">Galeria</h1>
+								
+					<div class="slideshow-container">
+					  
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 3</div>
+						<img src="img/koloseum2.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 3</div>
+						<img src="img/koloseum3.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">3 / 3</div>
+						<img src="img/koloseum4.png" style="width:100%">
+					</div>
+					
+					<script>
+					var slideIndex = 0;
+					showSlides();
+
+					function showSlides() {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  var dots = document.getElementsByClassName("dot");
+					  for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					  }
+					  slideIndex++;
+					  if (slideIndex > slides.length) {slideIndex = 1}
+					  slides[slideIndex-1].style.display = "block";
+					  setTimeout(showSlides, 3000); // Change image every 2 seconds
+					}
+					</script>
+				</div>
+				
+			</div>
+			
+			</div>
+			<div class="slajd">
+				<h3> Więcej informacji na temat Koloseum:<a target="blank" href="https://pl.wikipedia.org/wiki/Koloseum"> https://pl.wikipedia.org/wiki/Koloseum <a> </h3>
+			</div>
+		<div id="footer">
+			<a href="mailto:baku.96@wp.pl"> Kasia Nadera 2020 Kliknij tutaj aby wysłać maila! </a>
+		</div>
+	</div>
+  </body>
+
+</html>

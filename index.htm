@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Miejsca, które chciałabym zwiedzić</title>
+
+     <meta name="description" content="Strona o miejscach, które chciałabym zwiedzić">
+     <meta name="keywords" content="rzym,koloseum,panteon,watykan,bazylika,zwiedzanie,podróżowanie">
+     <meta name="author" content="Kasia Nadera">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+	 </script>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	 <script src="jquery.scrollTo.min.js"></script>
+	
+	 <script>
+		
+		 jQuery(function($)
+		 {
+			//zresetuj scrolla
+		 	$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#Rzym'), 1000); });
+			$('#link2').click(function() { $.scrollTo($('#Historia'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('#Demografia'), 1000); });
+			$('#link4').click(function() { $.scrollTo($('#Miejsca'), 1000); });
+
+			$('.scrollup').click(function() { $.scrollTo($('body'), 700); });
+		 }
+		 );
+		
+		 //pokaż podczas przewijania
+		 $(window).scroll(function()
+		 {
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		 }
+		 );
+	
+	
+	 </script>
+	 
+	 <script type="text/javascript">
+ 
+    //utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+    </script>
+
+  </head>
+  <body>
+	<div id="container">
+	
+		<a href="#" class="scrollup"></a>
+		
+			<div id="menu">
+				<ul>
+					<li><a href="index.htm">Rzym</a></li>
+					<li><a href="koloseum.htm">Koloseum</a></li>
+					<li><a href="panteon.htm">Panteon</a></li>
+					<li><a href="bazylika.htm">Bazylika Św. Piotra</a></li>
+					<li><a href="muzeum.htm">Muzea Watykańskie</a></li>
+				</ul>
+				<div id="zegar">
+				</div>
+			</div>
+			<div id="content">
+			
+			<!--Spis treści-->
+			
+				<div class="slajd">
+					<h1> Spis treści. </h1>
+					<ol>
+						<li><a id="link1" href="#">Rzym - stolica Włoch</a></li>
+						<li><a id="link2" href="#">Historia powstania</a></li>
+						<li><a id="link3" href="#">Demografia</a></li>
+						<li><a id="link4" href="#">Znane miejsca w Rzymie</a></li>
+					<ol>
+				</div>
+				
+				<!--Pierwszy slajd-->
+				
+				<div class="slajd">
+					<h1 id="Rzym"> Rzym - Stolica Włoch </h1>
+					Rzym - stolica i największe miasto Włoch, położone w środkowej części kraju nad rzeką Tyber i Morzem Śródziemnym. Centrum administracyjne ma powierzchnię 1287 km² i liczbę ludności 2 868 104, będąc czwartym co do wielkości miastem Unii Europejskiej. Miasto Stołeczne Rzym ma 4 331 856 mieszkańców. Rzym jest również stolicą regionu administracyjno-historycznego Lacjum (Lazio).
+
+					Rzym od starożytności znany jest jako Wieczne Miasto, a także „stolica świata”.
+					<br>
+					<br>
+					<h3> Położenie Rzymu na mapie</h3>
+					<br>
+					<img width="700px" src="img/mapa.png">
+				</div>
+				<!--Drugi slajd-->
+				
+				<div class="slajd">
+					<h1 id="Historia"> Historia powstania rzymu </h1>
+					Zgodnie z legendą Rzym został założony w 753 roku p.n.e. Legenda głosi, że w mieście Alba Longa władał król Numitor, który został pozbawiony władzy rzez swego brata Amuliusza. Gdy córka Numitora Rea Sylwia urodziła bliźniaki, Amuliusz nakazał włożyć je do koszyka i puścić z biegiem Tybru. Koszyk z niemowlętami - Remusem i Romulusem nie utonął, a osiadł na brzegu, gdzie dzieci znalazła wilczyca. Wykarmiła je własnym mlekiem, a gdy chłopcy dorośli powrócili do Alba Longa, gdzie usunęli z tronu Amuliusza i oddali go z powrotem w ręce swego dziadka Numitora. Romulus na jednym z okolicznych wzgórz założył miasto, gdy jednak na jego terytorium wkroczył Remus ukarał brata śmiercią. Tak miało dojść do założenia Rzymu i rozpoczęcia okresu królewskiego w jego dziejach. Po Romulusie rządziło jeszcze sześciu królów. Dopiero ostatni z nich Tarkwiniusz Pyszny śmignął na siebie niechęć mieszkańców Rzymu, gdy jego syn pohańbił żonę jednego z najbardziej szanowanych obywateli miasta. Król został wygnany a w Rzymie wprowadzono republikę. Wydaje się, że mieszkańcy nie uskarżali się na władzę królów. Tron rzymski obejmowali nie tylko rodowici Rzymianie ale także osoby z zewnątrz, władza królewska nie była bowiem dziedziczna, zdobywano ją na drodze wyborów bądź zamachu stanu.
+
+				</div>
+				
+				<!--Trzeci slajd-->
+				
+				<div class="slajd">
+					<h1 id="Demografia">Demografia Rzymu</h1>
+					<table>
+					<thead>
+						<tr>
+							<th>Miasto</th><th>Populacja</th><th>Powierzchnia</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Rzym</td><td>1287 km²</td><td>2 869 461</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				
+				<!--Czwarty slajd-->
+				
+				<div class="slajd">
+					<h1 id="Miejsca">Znane miejsca w Rzymie</h1>
+					Bazylika św. Jana na Lateranie <br>
+					Bazylika św. Pawła za Murami <br>
+					Bazylika św. Agnieszki za Murami<br>
+					Bazylika Santa Maria Maggiore<br>
+					Campo de' Fiori, miejsce spalenia na stosie Giordana Bruna<br>
+					Circus Maximus<br>
+					Cloaca Maxima<br>
+					Via del Corso<br>
+					Fontanna di Trevi<br>
+					Fontana delle Api w Rzymie<br>
+					Forum Boarium<br>
+					Forum Romanum<br>
+					Kapitol<br>
+					Koloseum<br>
+					Mauzoleum Augusta<br>
+					Ara Pacis<br>
+					Palatyn<br>
+					Panteon w Rzymie (jedyny obiekt starożytny całkowicie niezmieniony do dzisiaj)<br>
+					Piazza Navona<br>
+					Piazza del Popolo<br>
+					Piramida Cestiusza<br>
+					Plac Wenecki z pomnikiem Wiktora Emanuela II<br>
+					Pole Marsowe<br>
+					Rzymskie katakumby<br>
+					Schody Hiszpańskie<br>
+					Teatro Argentina<br>
+					Usta Prawdy<br>
+					Via Sacra<br>
+					Via Appia<br>
+					Watykan<br>
+					Zamek Świętego Anioła
+				</div>
+				<div class="slajd">
+					<h3> Więcej informacji na temat Rzymu:<a target="blank" href="https://pl.wikipedia.org/wiki/Rzym"> https://pl.wikipedia.org/wiki/Rzym <a> </h3>
+				</div>
+			</div>
+		<div id="footer">
+			<a href="mailto:baku.96@wp.pl"> Kasia Nadera 2020 Kliknij tutaj aby wysłać maila! </a>
+		</div>
+	</div>
+  </body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Panteon w Rzymie</title>
+
+     <meta name="description" content="Strona o miejscach, które chciałabym zwiedzić">
+     <meta name="keywords" content="rzym,koloseum,panteon,watykan,bazylika,zwiedzanie,podróżowanie">
+     <meta name="author" content="Kasia Nadera">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+	 </script>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	 <script src="jquery.scrollTo.min.js"></script>
+	
+	 <script>
+		
+		 jQuery(function($)
+		 {
+			//zresetuj scrolla
+		 	$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#Panteon'), 1000); });
+			$('#link2').click(function() { $.scrollTo($('#Historia'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('#Architektura'), 1000); });
+			$('#link4').click(function() { $.scrollTo($('#Galeria'), 1000); });
+
+			$('.scrollup').click(function() { $.scrollTo($('body'), 700); });
+		 }
+		 );
+		
+		 //pokaż podczas przewijania
+		 $(window).scroll(function()
+		 {
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		 }
+		 );
+	
+	
+	 </script>
+	 
+	 <script type="text/javascript">
+ 
+    //utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+    </script>
+
+  </head>
+  <body>
+	<div id="container">
+	
+		<a href="#" class="scrollup"></a>
+		
+			<div id="menu">
+				<ul>
+					<li><a href="index.htm">Rzym</a></li>
+					<li><a href="koloseum.htm">Koloseum</a></li>
+					<li><a href="panteon.htm">Panteon</a></li>
+					<li><a href="bazylika.htm">Bazylika Św. Piotra</a></li>
+					<li><a href="muzeum.htm">Muzea Watykańskie</a></li>
+				</ul>
+				<div id="zegar">
+				</div>
+			</div>
+			<div id="content">
+			
+			<!--Spis treści-->
+			
+			<div class="slajd">
+				<h1> Spis treści. </h1>
+				<ol>
+					<li><a id="link1" href="#">Panteon w Rzymie</a></li>
+					<li><a id="link2" href="#">Historia powstania</a></li>
+					<li><a id="link3" href="#">Architektura</a></li>
+					<li><a id="link4" href="#">Galeria</a></li>
+				<ol>
+			</div>
+			
+			<!--Pierwszy slajd-->
+			
+			<div class="slajd">
+				<h1 id="Panteon"> Panteon w Rzymie </h1>
+				<p>Panteon - okrągła świątynia na Polu Marsowym, ufundowana przez cesarza Hadriana w roku 125 na miejscu wcześniejszej z 27 r. p.n.e., zniszczonej w pożarze w 64 r. n.e.</p>
+				<p>Budową gmachu kierował Apollodoros, zesłany, po czym prawdopodobnie stracony później przez cesarza. Panteon poświęcony był bóstwom planetarnym oraz ówcześnie panującemu cesarzowi, a od VII wieku Panteon jest użytkowany jako katolicki kościół pw. Santa Maria ad Martyres (pol. Najświętszej Marii Panny od Męczenników).</p>
+				<p>Jest jedną z najlepiej zachowanych budowli z czasów starożytnego Rzymu. 42-metrowa kopuła Santa Maria del Fiore Filippo Bruneleschiego we Florencji została wybudowana na wzór tej z Rzymu. Na panteonie wzorowany jest także warszawski kościół św. Aleksandra przy Placu Trzech Krzyży.</p>
+			</div>
+			
+			<!--Drugi slajd-->
+			
+			<div class="slajd">
+				<h1 id="Historia"> Historia powstania Panteonu </h1>
+				Panteon o kształcie walca przykrytego kopułą półkulistą stanął na miejscu prostokątnej świątyni ufundowanej ku czci boskich patronów Rzymu w roku 27 p.n.e. przez Agryppę (zięcia i najbliższego współpracownika cesarza Oktawiana Augusta). Uległ on zniszczeniu w roku 80 na skutek wielkiego pożaru Rzymu. Został odbudowany staraniem cesarza Hadriana około roku 125 już w zmienionej formie – na planie okręgu, pozostawiono jednak oryginalny, zachowany po pożarze prostokątny portyk z kolumnadą i z napisem fundacyjnym na belkowaniu frontonu, poświęconym Agryppie. Portyk został wówczas przekryty potężnymi brązowymi dźwigarami długości 11,8 m, o których w 1450 r. wspominał architekt Leone Battista Alberti. Podczas najazdu barbarzyńców na Rzym w V wieku świątynia została uszkodzona.
+			</div>
+			
+			<!--Trzeci slajd-->
+			
+			<div class="slajd">
+				<h1 id="Architektura">Architektura Panteonu</h1>
+				Panteon jest rotundą o średnicy 43,6 m i takiej samej wysokości. Przed wejściem do świątyni znajduje się dobudowany trzyrzędowy portyk 16 kolumn w porządku korynckim, z czego 8 ustawionych jest w pierwszym rzędzie. Wieńczy go tympanon, pod którym, na belkowaniu widnieje inskrypcja: M AGRIPPA L F COS TERTIVM FECIT/M(arcus) Agrippa L(ucii)F(ilius) CO(n)S(ul) TERTIVM FECIT, którą można przetłumaczyć jako „Wzniesiony przez Marka Agryppę, syna Lucjusza, kiedy był po raz trzeci konsulem”. Wysokość portyku wraz z tympanonem wynosi 25,0 m.
+
+				<p>Kopuła budowli odlana jest z niezbrojonego, monolitycznego betonu z centralnym otworem (oculusem) o średnicy ok. 7,9 m, jedynym otworem w kopule oświetlającym wnętrze. Ponieważ otwór nie ma przykrycia, posadzka na środku jest lekko wklęsła z odpływem na zewnątrz do odprowadzania wód opadowych. Struktura kopuły jest pozbawiona nadmiernej masy oraz usztywniona żebrami przez zastosowanie kasetonów, a masywne ściany bębna podporowego kopuły zostały usztywnione i uelastycznione (na ich ruchy od zmian termicznych) przy jednoczesnym znacznym obniżeniu ich masy poprzez regularnie rozmieszczone wnęki. Siły poziomego rozporu kopuły zostały zrównoważone przez nadbudowanie w postaci schodkowo spiętrzonych siedmiu pierścieni dociążających płaszcz kopuły w polu jej oparcia na bębnie podporowym ścian Panteonu.</p>
+			</div>
+			
+			<!--Czwarty slajd-->
+			
+			<div class="slajd">
+				<h1 id="Galeria">Galeria</h1>
+								
+					<div class="slideshow-container">
+					  
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 3</div>
+							<img src="img/panteon1.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 3</div>
+							<img src="img/panteon2.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<img src="img/panteon3.png" style="width:100%">
+						</div>
+						
+						<script>
+						var slideIndex = 0;
+						showSlides();
+
+						function showSlides() {
+						  var i;
+						  var slides = document.getElementsByClassName("mySlides");
+						  var dots = document.getElementsByClassName("dot");
+						  for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";  
+						  }
+						  slideIndex++;
+						  if (slideIndex > slides.length) {slideIndex = 1}
+						  slides[slideIndex-1].style.display = "block";
+						  setTimeout(showSlides, 3000); // Change image every 2 seconds
+						}
+						</script>
+					</div>
+			</div>
+			<div class="slajd">
+				<h3> Więcej informacji na temat Panteonu:<a target="blank" href="https://pl.wikipedia.org/wiki/Panteon w Rzymie"> https://pl.wikipedia.org/wiki/Panteon w Rzymie <a> </h3>
+			</div>
+			</div>
+		<div id="footer">
+			<a href="mailto:baku.96@wp.pl"> Kasia Nadera 2020 Kliknij tutaj aby wysłać maila! </a>
+		</div>
+	</div>
+  </body>
+
+</html>

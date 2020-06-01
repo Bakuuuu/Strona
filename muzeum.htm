@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+     <meta charset="utf-8">
+     <title>Muzea Watykańskie</title>
+
+     <meta name="description" content="Strona o miejscach, które chciałabym zwiedzić">
+     <meta name="keywords" content="rzym,koloseum,panteon,watykan,bazylika,zwiedzanie,podróżowanie">
+     <meta name="author" content="Kasia Nadera">
+
+     <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript">
+	 </script>
+	 
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	 <script src="jquery.scrollTo.min.js"></script>
+	
+	 <script>
+		
+		 jQuery(function($)
+		 {
+			//zresetuj scrolla
+		 	$.scrollTo(0);
+			
+			$('#link1').click(function() { $.scrollTo($('#Muzeum'), 1000); });
+			$('#link2').click(function() { $.scrollTo($('#Muzea'), 1000); });
+			$('#link3').click(function() { $.scrollTo($('#Kaplica'), 1000); });
+			$('#link4').click(function() { $.scrollTo($('#Galeria'), 1000); });
+
+			$('.scrollup').click(function() { $.scrollTo($('body'), 700); });
+		 }
+		 );
+		
+		 //pokaż podczas przewijania
+		 $(window).scroll(function()
+		 {
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		 }
+		 );
+	
+	
+	 </script>
+	 
+	 <script type="text/javascript">
+ 
+    //utworzenie funkcji o nazwie czas
+    function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+ 
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+            godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+            minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+            sekunda = "0" + sekunda;
+        }
+ 
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = godzina + " : " + minuta + " : " + sekunda;
+ 
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+    }
+    window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+    </script>
+
+  </head>
+  <body>
+	<div id="container">
+	
+		<a href="#" class="scrollup"></a>
+		
+			<div id="menu">
+				<ul>
+					<li><a href="index.htm">Rzym</a></li>
+					<li><a href="koloseum.htm">Koloseum</a></li>
+					<li><a href="panteon.htm">Panteon</a></li>
+					<li><a href="bazylika.htm">Bazylika Św. Piotra</a></li>
+					<li><a href="muzeum.htm">Muzea Watykańskie</a></li>
+				</ul>
+				<div id="zegar">
+				</div>
+			</div>
+			<div id="content">
+			
+			<!--Spis treści-->
+			
+			<div class="slajd">
+				<h1> Spis treści. </h1>
+				<ol>
+					<li><a id="link1" href="#">Muzeum Watykańskie</a></li>
+					<li><a id="link2" href="#">Skład Muzeów</a></li>
+					<li><a id="link3" href="#">Kapilica Sykstyńska</a></li>
+					<li><a id="link4" href="#">Galeria</a></li>
+				<ol>
+			</div>
+			
+			<!--Pierwszy slajd-->
+			
+			<div class="slajd">
+				<h1 id="Muzeum"> Muzeum Watykańskie </h1>
+				Muzeum Watykańskie często nazywane jest Muzeami Watykańskimi (w liczbie mnogiej) jest kompleksem muzealnym znajdującym się na terenie Watykanu. Kompleks liczy 13 muzeów mieszczących się w 2 pałacach watykańskich.
+				
+				<p>Muzeum Watykańskie zostało założone przez dwóch papieży. Wszystko zaczęło się od Klemensa XIV (1769-1774) i papieża Piusa VI (1775-1799). Byli pierwszymi, którzy udostępnili ogółowi społeczeństwa kolekcję dzieł sztuki Państwa Watykańskiego w celu promowania kultury wśród ludzi.</p>
+				
+				Imponująca kolekcja dzieł sztuki Muzeów Watykańskich obejmuje ponad 4,5 km galerii. Każda dostępna trasa kończy się w Kaplicy Sykstyńskiej.
+			</div>
+			
+			<!--Drugi slajd-->
+			
+			<div class="slajd">
+				<h1 id="Muzea"> W skład Muzeów wchodzą m.in.: </h1>
+				<p>Pinakoteka – muzeum powstałe podczas pontyfikatu Piusa VI. Gromadzi obrazy od wczesnego renesansu do XIX wieku. Można w niej zobaczyć dzieła takich mistrzów jak Giotto, Bellini, Leonardo da Vinci, Caravaggio, Domenichino, Guido Reni i wielu innych. W salach pinakoteki znajduje się także zbiór ikon bizantyjskich. Galeria obrazów zgromadzona przez Piusa VI została wywieziona przez Francuzów. Po kongresie wiedeńskim zbiory odtworzył Canova odzyskując część kolekcji. Pius XI, po paktatach laterańskich, zreorganizował Watykan i w 1932 przeniósł do obecnej siedziby. Kolekcja liczy 432 obrazy, prócz tego fragmenty fresków i ołtarzy.</p>
+				<p>Muzeum Pio-Clementino – zapoczątkowała kolekcja rzeźb antycznych zgromadzona przez Klemensa XIV i Piusa VI. Wśród greckich i rzymskich rzeźb najbardziej znane są: Apollo Belwederski, Grupa Laokoona i Tors Belwederski.</p>
+				<p>Gregoriańskie Muzeum Etruskie (założone w 1836) i Muzeum Egipskie (założone w 1839 przez Grzegorza XVI) gromadzi zabytki pochodzące z wykopalisk prowadzonych na terenach południowej Etrurii i w Egipcie.</p>
+				<p>Muzeum Misyjno-Etnologiczne (założone w 1925 przez Piusa XI). Muzeum Podzielone jest na 2 części: pierwszą (Il Percorso principale) poświęcona tylko historii różnych religii w poszczególnych krajach pozaeuropejskich. Muzeum to podzielone jest na 25 działów obejmujących różne kraje lub większe strefy kulturowo-religijne (Chiny, Japonia, Korea, Tybet – Mongolia, Indochiny, subkontynent Indii, Indonezja – Filipiny, Polinezja, Melanezja, Australia, Etiopia, Madagaskar, Afryka, Ameryka, Persja). Ta część jest ogólnie dostępna dla publiczności. Druga część jest to muzeum – etnologii (Il Percorso secondario). Ten dział mogą oglądać wcześniej umówione grupy. Eksponaty w muzeum to głównie dary ofiarowywane papieżom oraz z wykopalisk. W latach 1967-1996 dyrektorem tego muzeum był Polak ks. Józef Penkowski.</p>
+				<p>Muzeum Chiaramonti – powstało z inicjatywy Piusa VII w 1807, gromadzi kolekcję rzeźb antycznych powstałych w okresie od I wieku p.n.e. do III wieku.</p>
+
+			</div>
+			
+			<!--Trzeci slajd-->
+			
+			<div class="slajd">
+				<h1 id="Kaplica"> Kaplica Sykstyńska </h1>
+				
+				<p>Większość turystów decyduje się na wizytę w Muzeach Watykańskich właśnie dla niej, aby móc na własne oczy zobaczyć genialne freski Michała Anioła.</p>
+				<p>Kaplica zawdzięcza swoje powstanie papieżowi Sykstusowi IV, który postanowił, że będzie to prywatna kaplica papieska. Autorem projektu był Giovanni de Dolci, budowa zaczeła się w 1475, a skończyła w 1483 roku. Co ciekawe kaplica nie posiada drzwi zewnętrznych i jest dostępna tylko od wewnątrz, z Muzeów Watykańskich, natomiast jej wymiary odpowiadają wymiarom Świątyni Salomona, podanych w Starym Testamencie.</p>
+
+				<p>Najważniejsze są oczywiście malowidła zdobiące kaplicę. Wykonano je w kilku etapach. Najstarsze są freski wykonane na ścianach bocznych, czyli tak zwana Stara Sykstyna. Przedstawiają one sceny ze Starego i Nowego Testamentu oraz wizerunki pierwszych 28 papieży. Wykonali je różni artyści, miedzy innymi: Boticelli, Pinturicchi, Perugino, Ghirlandaio w latach 1481-83.</p>
+				
+				<img src="img/kaplica.jpg" width="700px">
+			</div>
+			
+			<!--Czwarty slajd-->
+			
+			<div class="slajd">
+				<h1 id="Galeria">Galeria</h1>
+								
+					<div class="slideshow-container">
+					  
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 5</div>
+							<img src="img/muzea1.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 5</div>
+							<img src="img/muzea2.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 5</div>
+							<img src="img/muzea3.png" style="width:100%">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 5</div>
+							<img src="img/muzea4.png" style="width:100%">
+						</div>
+						
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 5</div>
+							<img src="img/muzea5.png" style="width:100%">
+						</div>
+						
+						
+						<script>
+						var slideIndex = 0;
+						showSlides();
+
+						function showSlides() {
+						  var i;
+						  var slides = document.getElementsByClassName("mySlides");
+						  var dots = document.getElementsByClassName("dot");
+						  for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";  
+						  }
+						  slideIndex++;
+						  if (slideIndex > slides.length) {slideIndex = 1}
+						  slides[slideIndex-1].style.display = "block";
+						  setTimeout(showSlides, 3000); // Change image every 2 seconds
+						}
+						</script>
+					</div>
+			</div>
+			</div>
+		<div id="footer">
+			<a href="mailto:baku.96@wp.pl"> Kasia Nadera 2020 Kliknij tutaj aby wysłać maila! </a>
+		</div>
+	</div>
+  </body>
+
+</html>
